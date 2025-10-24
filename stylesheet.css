@@ -1,5 +1,5 @@
 body {
-	/*background-color: #FFDAB9;	*/
+	/*background-color: #b9d8ff;	*/
 	background-color: #000;
 	-webkit-transition:background-color linear 5s;
 	-moz-transition:background-color linear 5s;
@@ -12,7 +12,7 @@ body {
 	display: none;
 }
 .peach {
-	background-color: #FFDAB9;
+	background-color: #b9d8ff;
 	
 }
 .peach-after {
@@ -25,90 +25,90 @@ body {
 
 @-webkit-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 	25%{
-		background-color: #FFE4B5;
+		background-color: #b5eaff;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 	75%{
-		background-color: #FFEFD5;
+		background-color: #b5eaff;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 }
 @-moz-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 	25%{
-		background-color: #FFE4B5;
+		background-color: #b5beff;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 	75%{
-		background-color: #FFEFD5;
+		background-color: #b5eaff;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 }
 
 @-o-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 	25%{
-		background-color: #FFE4B5;
+		background-color: #b5beff;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 	75%{
-		background-color: #FFEFD5;
+		background-color: #b5eaff;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 }
 
 @-ms-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 	25%{
-		background-color: #FFE4B5;
+		background-color: #b5beff;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 	75%{
-		background-color: #FFEFD5;
+		background-color: #b5eaff;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 }
 
 @keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 	25%{
-		background-color: #FFE4B5;
+		background-color: #b5beff;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 	75%{
-		background-color: #FFEFD5;
+		background-color: #b5eaff;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: #b9d8ff;
 	}
 }
 
@@ -969,7 +969,7 @@ audio {
 }
 
 .bannar {
-	max-width: 100%;
+	max-width: 60%;
 	-webkit-transform:translate(0px,-500px);
 	-moz-transform:translate(0px,-500px);
 	-o-transform:translate(0px,-500px);
@@ -1078,13 +1078,16 @@ audio {
 .balloons {
 	position: fixed;
 	bottom: -200px;
-	opacity: 0.6;
+	opacity: 0.9;
 	z-index: 99;
-	width: 100px;
-	height: 183px;
-	background-repeat: no-repeat no-repeat;
-	background-size: 100px 183px;
+	width: 150px;              /* adjust size */
+	aspect-ratio: 100 / 183;   /* keeps original balloon ratio */
+	background-repeat: no-repeat;
+	background-size: contain;  /* prevents stretching */
+	background-position: center;
 }
+
+
 .balloons h2 {
 	text-transform: uppercase;
 	font-family: 'Signika', sans-serif;
@@ -1267,39 +1270,71 @@ audio {
 .cake-cover {
 	margin-top: 50px;
 }
+/* Add this @import at the top of your CSS file
+  to get the modern, comical "Nunito" font.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+
+/* Keyframes for the "jiggle" animation */
+
+
 .message {
+	position: fixed;   /* or absolute */
+
 	margin-top: 200px;
 	display: none;
+	text-align: center;
 }
+
 .message p {
-	font-family: 'Signika', sans-serif;
-	font-size: 30px;
-	text-transform: uppercase;
-	color: #C4515C;
-	text-shadow: 2px 2px 2px #FFF;
-	display: none;
-	font-weight: bold;
-}
+    /* Use a modern, rounded, comical font */
+    font-family: 'Nunito', 'Arial Rounded MT Bold', 'Helvetica Rounded', sans-serif;
+    font-size: 3.5rem; /* Bigger for more impact */
+    text-transform: uppercase;
+    font-weight: 900; /* Needs to be very bold for the effect */
+    letter-spacing: 2px; /* A bit of modern spacing */
+    display: none;
+    
+    /* === The Three-Layer Style === */
+    
+    /* Layer 1: The main text color (Bright Yellow) */
+    color: #FEEA3D; 
+    
+    /* Layer 2: The middle layer (Poppy Orange-Red) */
+    /* Layer 3: The back drop shadow (Dark Gray) */
+    text-shadow: 3px 3px 0 #F85A3E, 
+                 6px 6px 0 #2A2A2A;
 
+    /* A subtle comical jiggle animation */
+}
 .btn-primary {
-        border-color: #466baf;
-        padding: 10px;
-        text-transform: uppercase;
-        font-family: 'Signika', sans-serif;
-        font-weight: 700;
-        color: #fff;
-        background-color: #466baf;
+    border: none;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    font-family: 'Comic Sans MS', 'Signika', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(45deg, #ff4b2b, #ff416c, #ffb347);
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
-    .btn-primary:hover,
-    .btn-primary:focus,
-    .btn-primary:active,
-    .btn-primary.active,
-    .open .dropdown-toggle.btn-primary {
-        border-color: #fff;
-        color: #fff;
-        background-color: #466baf;
-    }
 
+.btn-primary:hover {
+    transform: scale(1.1) rotate(-2deg);
+    background: linear-gradient(45deg, #ff416c, #ffb347, #ff4b2b);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+.btn-primary::after {
+    content: " 🎉";
+}
 
 
     /*controlling tablet width*/
